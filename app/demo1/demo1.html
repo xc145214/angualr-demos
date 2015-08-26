@@ -1,0 +1,17 @@
+<h1>父子scope model绑定</h1>
+
+
+<!--parent-->
+<input type="text" ng-model="data.message">
+<h1>{{data.message}}</h1>
+
+<div ng-controller="FirstCtrl">
+    <input type="text" ng-model="data.message">
+    <h1>{{data.message}}</h1>
+</div>
+
+
+<div ng-controller="SecondCtrl">
+    <input type="text" ng-model="data.message">
+    <h1>{{data.message}}</h1>
+</div>

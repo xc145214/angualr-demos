@@ -1,0 +1,21 @@
+<h1>basic behavior </h1>
+
+<div enter="panel" leave>
+    I'm a content!
+</div>
+
+
+
+
+
+<div ng-controller="ChoreCtrl">
+    <kid done="logChore(chore)"></kid>
+</div>
+
+
+
+
+<div ng-controller="AppCtrl">
+    <input type="text" ng-model="ctrlFlavor">
+    <div drink flavor="{{ctrlFlavor}}"></div>
+</div>

@@ -1,0 +1,11 @@
+<h1>ngFilter </h1>
+
+<div ng-controller="AvengersCtrl">
+    <table>
+        <input type="text" ng-model="search.$">
+        <tr ng-repeat="actor in avengers.cast | filter:search">
+            <td>{{actor.name}}</td>
+            <td>{{actor.character}}</td>
+        </tr>
+    </table>
+</div>
