@@ -47,22 +47,66 @@ angular.module("myApp.demo5", ["ngRoute"])
         }
     }])
 
-    .controller("AppCtrl",["$scope",function($scope){
+    .controller("App1Ctrl",["$scope",function($scope){
 
-        $scope.ctrlFlavor = "blackBerry"
+        $scope.ctrlFlavor = "blackBerry";
+
+
     }])
+
     .directive("drink", function () {
         return {
-            //scope:{},
-            //template:'<div>{{flavor}}</div>',
-            //link:function(scope,element,attrs){
-            //    scope.flavor=attrs.flavor;
-            //},
+
             scope:{
                 flavor:"@"
             },
             template:'<div>{{flavor}}</div>',
 
+        }
+    })
+
+    .directive("drink1",function(){
+        return {
+            scope:{},
+            template:'<div>{{flavor}}</div>',
+            link:function(scope,element,attrs){
+                scope.flavor=attrs.flavor;
+            }
+        }
+    })
+
+    .directive("drink2",function(){
+        return {
+            scope:{
+                flavor:"="
+            },
+            template:'<div>{{flavor}}</div>'
+
+        }
+    })
+
+    .directive("drink3",function(){
+        return {
+            scope:{
+                flavor:"="
+            },
+            template:'<input type="text" ng-model="flavor"/>'
+
+        }
+    })
+
+    .controller("App2Ctrl",["$scope",function($scope){
+        $scope.callHome= function(message){
+            alert(message);
+        }
+    }])
+    .directive("phone",function(){
+        return{
+            scope:{
+                dial:'&'
+            },
+            template:'<input type="text" ng-model="value"/>' +
+            '<div class="button" ng-click="dial({message:value})">Call Home!</div>'
         }
     })
     .controller('Demo5Ctrl', [function () {

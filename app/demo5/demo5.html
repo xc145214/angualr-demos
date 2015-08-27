@@ -15,7 +15,26 @@
 
 
 
-<div ng-controller="AppCtrl">
+<div ng-controller="App1Ctrl">
     <input type="text" ng-model="ctrlFlavor">
+
     <div drink flavor="{{ctrlFlavor}}"></div>
+    <h4>scope null</h4>
+    <div drink1 flavor="{{ctrlFlavor}}"></div>
+    <h4>scope =</h4>
+    <div drink2 flavor="ctrlFlavor"></div>
+
+    <h4>scope =</h4>
+    <div drink3 flavor="ctrlFlavor"></div>
+
+    <hr/>
+
+
+</div>
+
+
+<div ng-controller="App2Ctrl">
+    <div phone dial="callHome(message)"></div>
+    <div phone dial="callHome(message)"></div>
+    <div phone dial="callHome(message)"></div>
 </div>
