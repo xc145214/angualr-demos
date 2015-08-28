@@ -11,7 +11,12 @@ angular.module('myApp', [
     'myApp.demo3',
     'myApp.demo4',
     'myApp.demo5',
-    'myApp.demo6'
+    'myApp.demo6',
+    'myApp.demo7',
+    'myApp.demo8',
+    'myApp.demo9',
+    'myApp.demo10',
+    'myApp.demo11'
 ]).config(['$routeProvider', function ($routeProvider) {
     $routeProvider.otherwise({redirectTo: '/view1'});
 }]);
