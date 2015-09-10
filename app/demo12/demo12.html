@@ -1,0 +1,21 @@
+<lessonnav id="navbar" ng-controller="lessonNavCtrl"></lessonnav>
+
+
+
+<script type="text/ng-template" id="zippy.html">
+<div>
+    <h3 ng-click="toggleContent()">{{title}}</h3>
+    <div ng-show="isContentVisible" ng-transclude>hello world</div>
+</div>
+</script>
+
+<h1>template-URL</h1>
+
+<input type="text" ng-model="model.title">
+<input type="text" ng-model="model.content">
+
+<zippy2 title="{{model.title}}">
+    This is the {{model.content}}
+</zippy2>
+
+

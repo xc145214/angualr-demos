@@ -1,0 +1,24 @@
+
+    <h3>{{locations.error}}</h3>
+
+    <table class="pricing-table">
+        <caption>地址信息列表</caption>
+        <thead>
+        <tr>
+            <th>编号</th>
+            <th>省份</th>
+            <th>城市</th>
+            <th>重量</th>
+            <th>体积</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="location in locations">
+            <td>{{$index +1}}</td>
+            <td>{{ location.province }}</td>
+            <td>{{ location.city }}</td>
+            <td>{{ location.heavyRate }}</td>
+            <td>{{ location.volumeRate }}</td>
+        </tr>
+        </tbody>
+    </table>
