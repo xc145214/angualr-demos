@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>ng-view</title>
+    <link rel="stylesheet" href="../../bower_components/foundation/css/foundation.min.css">
+</head>
+<body>
+
+
+<div ng-app="app" ng-controller="RoomCtrl as room">
+    <div class="button" ng-click="room.openDoor()">
+        {{ room.buttonTitle }}
+
+        <div ng-controller="OtherCtrl as other">
+            {{ room.foo }}
+            {{ other.foo }}
+        </div>
+    </div>
+</div>
+
+<script src="../../bower_components/angular/angular.js"></script>
+<script src="../../bower_components/angular-route/angular-route.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

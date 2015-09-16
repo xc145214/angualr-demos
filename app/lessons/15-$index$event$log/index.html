@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>ng-view</title>
+    <link rel="stylesheet" href="../../bower_components/foundation/css/foundation.min.css">
+</head>
+<body>
+
+
+<div ng-app="app">
+    <div ng-controller="FooCtrl">
+        <div class="button"
+             ng-repeat="item in 'somewords'.split('') track by $id($index)"
+             ng-click="myFunc($event)">
+            {{ $index + 1 }}. {{ item }}
+            {{ ev.pageX }}
+        </div>
+    </div>
+</div>
+
+
+<script src="../../bower_components/angular/angular.js"></script>
+<script src="../../bower_components/angular-route/angular-route.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
